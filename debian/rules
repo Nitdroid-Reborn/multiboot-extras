@@ -1,0 +1,50 @@
+#!/usr/bin/make -f
+
+DESTDIR := $(CURDIR)/debian/multiboot-extras
+
+
+configure:
+
+build:
+
+
+binary: binary-indep binary-arch
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	install -o root -g root -m 0755 -d $(DESTDIR)/boot
+	install -o root -g root -m 0755 -d $(DESTDIR)/boot/multiboot
+	install -o root -g root -m 0644 images/vmlinuz-2.6.28-omap1 $(DESTDIR)/boot/multiboot
+
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_clean
+
+
+.PHONY: build clean binary-indep binary-arch binary install configure
+

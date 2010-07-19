@@ -1,0 +1,17 @@
+Source: multiboot-extras
+Section: user/system
+Priority: extra
+Maintainer: Jay Cartman <jay.cartman@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: multiboot-extras
+Architecture: armel
+Description: Linux kernels for Maemo 5, for use with multiboot
+ This package installs the linux kernel image for Maemo 5 PR12,
+ to be used with multiboot (>0.2.3).
+ .
+ This package is maintained by Jay Cartman <jay.cartman@gmail.com>
+ .
+XB-Maemo-Display-Name: Maemo 5 PR12 kernel for multiboot
+XB-Maemo-Flags: system-update
