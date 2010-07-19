@@ -1,0 +1,6 @@
+multiboot-extras (0.1) unstable; urgency=low
+
+  * Maemo 5 PR12 default kernel from the official flash file
+    RX-51_2009SE_10.2010.19-1.203.1_PR_COMBINED_203_ARM.bin
+
+ -- Jay Cartman <jay.cartman@gmail.com>  Mon, 19 Jul 2010 16:05:08 +0100
