@@ -1,6 +1,11 @@
 #!/usr/bin/make -f
 
-DESTDIR := $(CURDIR)/debian/multiboot-extras
+MAEMO_DIR    :=	$(CURDIR)/debian/multiboot-kernel-maemo
+POWER_DIR    :=	$(CURDIR)/debian/multiboot-kernel-power
+
+MAEMO_CONF   :=	$(CURDIR)/config/00-Maemo-2.6.28-omap1.item
+
+MAEMO_IMAGE  :=	$(CURDIR)/images/vmlinuz-2.6.28-omap1
 
 
 configure:
@@ -35,9 +40,11 @@ install: build
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-	install -o root -g root -m 0755 -d $(DESTDIR)/boot
-	install -o root -g root -m 0755 -d $(DESTDIR)/boot/multiboot
-	install -o root -g root -m 0644 images/vmlinuz-2.6.28-omap1 $(DESTDIR)/boot/multiboot
+	install -o root -g root -m 0755 -d $(MAEMO_DIR)/boot
+	install -o root -g root -m 0755 -d $(MAEMO_DIR)/boot/multiboot
+	install -o root -g root -m 0755 -d $(MAEMO_DIR)/etc/multiboot.d
+	install -o root -g root -m 0644 $(MAEMO_CONF) $(MAEMO_DIR)/etc/multiboot.d/
+	install -o root -g root -m 0644 $(MAEMO_IMAGE) $(MAEMO_DIR)/boot/multiboot/
 
 
 clean:

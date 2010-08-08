@@ -5,13 +5,26 @@ Maintainer: Jay Cartman <jay.cartman@gmail.com>
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 
-Package: multiboot-extras
+Package: multiboot-kernel-maemo
 Architecture: armel
-Description: Linux kernels for Maemo 5, for use with multiboot
+Depends: multiboot (>= 0.2.8)
+Description: Maemo 5 PR12 kernel for multiboot
  This package installs the linux kernel image for Maemo 5 PR12,
  to be used with multiboot (>0.2.3).
  .
  This package is maintained by Jay Cartman <jay.cartman@gmail.com>
  .
 XB-Maemo-Display-Name: Maemo 5 PR12 kernel for multiboot
+XB-Maemo-Flags: system-update
+
+Package: multiboot-kernel-power
+Architecture: armel
+Depends: multiboot (>= 0.2.8), kernel-power-bootimg (>=2.6.28-maemo39), kernel-power-modules (>=2.6.28-maemo39)
+Description: Maemo 'kernel-power' configuration for multiboot
+ This package installs the kernel-power configuration,
+ to be used with multiboot (>0.2.3).
+ .
+ This package is maintained by Jay Cartman <jay.cartman@gmail.com>
+ .
+XB-Maemo-Display-Name: Maemo kernel-power config for multiboot
 XB-Maemo-Flags: system-update

@@ -1,3 +1,14 @@
+multiboot-extras (0.2) unstable; urgency=low
+
+  * A few changes:
+    - Maemo 5 PR12 default kernel recompiled by jca
+    - New packages: 
+        o multiboot-kernel-power
+        o multiboot-kernel-maemo
+    - Dependencies fixed
+
+ -- Jay Cartman <jay.cartman@gmail.com>  Sun, 8 Jul 2010 12:12:21 +0100
+
 multiboot-extras (0.1) unstable; urgency=low
 
   * Maemo 5 PR12 default kernel from the official flash file
