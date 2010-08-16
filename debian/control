@@ -19,7 +19,7 @@ XB-Maemo-Flags: system-update
 
 Package: multiboot-kernel-power
 Architecture: armel
-Depends: multiboot (>= 0.2.8), kernel-power-bootimg (>=2.6.28-maemo39), kernel-power-modules (>=2.6.28-maemo39)
+Depends: multiboot (>= 0.2.8)
 Description: Maemo 'kernel-power' configuration for multiboot
  This package installs the kernel-power configuration,
  to be used with multiboot (>0.2.3).
