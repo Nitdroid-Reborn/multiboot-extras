@@ -1,3 +1,9 @@
+multiboot-extras (0.3.1) unstable; urgency=low
+
+  * Multiboot is now in Extras -> added dep on kernel-power
+
+ -- Jay Cartman <jay.cartman@gmail.com>  Thu, 19 Aug 2010 14:49:22 +0100
+
 multiboot-extras (0.3) unstable; urgency=low
 
   * Dependency on kernel-power removed
